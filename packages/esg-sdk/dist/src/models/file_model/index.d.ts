@@ -2,7 +2,7 @@
  * Represents a file model with properties related to a file.
  * @interface
  */
-interface IFileModel {
+export interface IFileModel {
     /**
      * The SHA hash of the file.
      * @type {string}
@@ -29,7 +29,7 @@ interface IFileModel {
  * @class
  * @implements {IFileModel}
  */
-declare class FileModel implements IFileModel {
+export declare class FileModel implements IFileModel {
     /**
      * The SHA hash of the file.
      * @type {string}

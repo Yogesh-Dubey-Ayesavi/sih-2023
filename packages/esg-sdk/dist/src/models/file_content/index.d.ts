@@ -2,7 +2,7 @@
  * Represents a file content model with properties related to a file.
  * @interface
  */
-interface IFileContent {
+export interface IFileContent {
     /**
      * The SHA hash of the file.
      * @type {string}
@@ -53,7 +53,7 @@ interface IFileContent {
 * console.log(fileContentInstance.type);     // Output: file
 * console.log(fileContentInstance.content);  // Output: content string
 */
-declare class FileContent implements IFileContent {
+export declare class FileContent implements IFileContent {
     /**
      * The SHA hash of the file.
      * @type {string}

@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileContent = void 0;
 /**
  * Represents a file content model with properties related to a file.
  * @class
@@ -36,3 +38,4 @@ class FileContent {
         this.content = data.content;
     }
 }
+exports.FileContent = FileContent;

@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileModel = void 0;
 /**
  * Represents a file model with properties related to a file.
  * @class
@@ -16,3 +18,4 @@ class FileModel {
         this.type = data.type;
     }
 }
+exports.FileModel = FileModel;
