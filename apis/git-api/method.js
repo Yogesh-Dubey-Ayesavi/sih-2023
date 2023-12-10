@@ -7,7 +7,7 @@
       this.params = params;
       this.body = body;
       this.owner = 'yogesh-dubey-ayesavi';
-      this.repoName = 'sih-docusaurus-template';
+      this.repoName = 'sih-2023';
 
       // Initialize Octokit instance with the provided token
       this.octokit = new Octokit({ auth: token });
@@ -53,9 +53,9 @@
 
     // Helper method to handle "get_content" request
     async handleGetContentRequest() {
-      const { sha, path, name, type, body } = await this.getContent(this.owner, this.repoName, `client/docs/${this.params.get_content}`  );
-      let content = Buffer.from(body, 'base64').toString('utf-8');
-      return { sha, path, name, type, content };
+      const { sha, path, name, type, content } = await this.getContent(this.owner, this.repoName, `client/docs/${this.params.get_content}`  );
+     
+      return { sha : sha, path:path, name:name, type:type, content: Buffer.from(content, 'base64').toString('utf-8')};
     }
 
     // Helper method to handle "create" request
