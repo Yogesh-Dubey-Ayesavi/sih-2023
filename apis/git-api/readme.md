@@ -32,13 +32,13 @@ List files in the "environment" directory.
 [
   {
     "sha": "abc123",
-    "path": "docs/environment/file1.md",
+    "path": "docs/environment/file1.mdx",
     "name": "file1.md",
     "type": "file"
   },
   {
     "sha": "def456",
-    "path": "docs/environment/file2.md",
+    "path": "docs/environment/file2.mdx",
     "name": "file2.md",
     "type": "file"
   },
@@ -53,7 +53,7 @@ List files in the "environment" directory.
 **Endpoint:**
 
 ```
-POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/get_content?path=docs/environment/file1.md
+POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?get_content=docs/environment/file1.mdx
 ```
 
 **Description:**
@@ -97,7 +97,7 @@ Create a new file in the "environment" directory.
 ```json
 {
   "sha": "new_sha_value",
-  "path": "docs/environment/newFile.md",
+  "path": "docs/environment/newFile.mdx",
   "name": "newFile.md",
   "type": "file"
 }
@@ -115,7 +115,7 @@ POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/update?type=up
 
 ```json
 {
-  "content": "Updated content of file1.md."
+  "content": "Updated content of file1.mdx"
 }
 ```
 
@@ -128,7 +128,7 @@ Update the content of an existing file.
 ```json
 {
   "sha": "new_sha_value",
-  "path": "docs/environment/file1.md",
+  "path": "docs/environment/file1.mdx",
   "name": "file1.md",
   "type": "file"
 }
