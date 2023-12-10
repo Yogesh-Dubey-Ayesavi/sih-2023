@@ -2,7 +2,7 @@
  * Represents a file comment model with properties related to a comment.
  * @interface
  */
-interface IFileComment {
+export interface IFileComment {
     /**
      * The IP address associated with the comment.
      * @type {string | undefined}
@@ -39,7 +39,7 @@ interface IFileComment {
    * @class
    * @implements {IFileComment}
    */
-  class FileComment implements IFileComment {
+  export class FileComment implements IFileComment {
     /**
      * The IP address associated with the comment.
      * @type {string | undefined}
