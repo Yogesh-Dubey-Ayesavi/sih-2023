@@ -53,7 +53,7 @@ List files in the "environment" directory.
 **Endpoint:**
 
 ```
-POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?get_content=docs/environment/file1.mdx
+POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?get_content=environment/file1.mdx
 ```
 
 **Description:**
@@ -65,10 +65,10 @@ Get the content of a specific file.
 ```json
 {
   "sha": "abc123",
-  "path": "docs/environment/file1.md",
-  "name": "file1.md",
+  "path": "docs/environment/file1.mdx",
+  "name": "file1.mdx",
   "type": "file",
-  "content": "This is the content of file1.md"
+  "content": "This is the content of file1.mdx"
 }
 ```
 
@@ -77,7 +77,7 @@ Get the content of a specific file.
 **Endpoint:**
 
 ```
-POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/create?type=create&path=docs/environment/newFile.mdx
+POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/create?type=create&path=environment/newFile.mdx
 ```
 
 **Request Body:**
@@ -139,7 +139,7 @@ Update the content of an existing file.
 **Endpoint:**
 
 ```
-POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/delete?type=delete&path=docs/environment/file1.md&sha=abc123
+POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/delete?type=delete&path=environment/file1.md&sha=abc123
 ```
 
 **Description:**
