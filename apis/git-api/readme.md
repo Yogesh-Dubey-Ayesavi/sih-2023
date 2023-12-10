@@ -7,16 +7,10 @@ The GitMethods API provides endpoints for managing files in a GitHub repository.
 All API endpoints are relative to the base URL:
 
 ```
-http://asia-south1-esgedu-740d2.cloudfunctions.net/git-api
+https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api
 ```
 
 ## Authentication
-
-Ensure that you include a valid GitHub Personal Access Token (PAT) in the request headers.
-
-```http
-Authorization: Bearer your_github_token_here
-```
 
 ## Endpoints
 
@@ -25,7 +19,7 @@ Authorization: Bearer your_github_token_here
 **Endpoint:**
 
 ```
-GET /list?list=environment
+POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/?list=environment
 ```
 
 **Description:**
@@ -59,7 +53,7 @@ List files in the "environment" directory.
 **Endpoint:**
 
 ```
-GET /get_content?path=docs/environment/file1.md
+POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/get_content?path=docs/environment/file1.md
 ```
 
 **Description:**
@@ -83,7 +77,7 @@ Get the content of a specific file.
 **Endpoint:**
 
 ```
-POST /create?type=create&path=docs/environment/newFile.md
+POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/create?type=create&path=docs/environment/newFile.mdx
 ```
 
 **Request Body:**
@@ -114,7 +108,7 @@ Create a new file in the "environment" directory.
 **Endpoint:**
 
 ```
-POST /update?type=update&path=docs/environment/file1.md&sha=abc123
+POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/update?type=update&path=docs/environment/file1.md&sha=abc123
 ```
 
 **Request Body:**
@@ -145,7 +139,7 @@ Update the content of an existing file.
 **Endpoint:**
 
 ```
-POST /delete?type=delete&path=docs/environment/file1.md&sha=abc123
+POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/delete?type=delete&path=docs/environment/file1.md&sha=abc123
 ```
 
 **Description:**
