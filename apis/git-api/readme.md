@@ -7,16 +7,10 @@ The GitMethods API provides endpoints for managing files in a GitHub repository.
 All API endpoints are relative to the base URL:
 
 ```
-http://asia-south1-esgedu-740d2.cloudfunctions.net/git-api
+https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api
 ```
 
 ## Authentication
-
-Ensure that you include a valid GitHub Personal Access Token (PAT) in the request headers.
-
-```http
-Authorization: Bearer your_github_token_here
-```
 
 ## Endpoints
 
@@ -25,7 +19,7 @@ Authorization: Bearer your_github_token_here
 **Endpoint:**
 
 ```
-GET /list?list=environment
+POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/?list=environment
 ```
 
 **Description:**
@@ -38,13 +32,13 @@ List files in the "environment" directory.
 [
   {
     "sha": "abc123",
-    "path": "docs/environment/file1.md",
+    "path": "docs/environment/file1.mdx",
     "name": "file1.md",
     "type": "file"
   },
   {
     "sha": "def456",
-    "path": "docs/environment/file2.md",
+    "path": "docs/environment/file2.mdx",
     "name": "file2.md",
     "type": "file"
   },
@@ -59,7 +53,7 @@ List files in the "environment" directory.
 **Endpoint:**
 
 ```
-GET /get_content?path=docs/environment/file1.md
+POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?get_content=environment/file1.mdx
 ```
 
 **Description:**
@@ -71,10 +65,10 @@ Get the content of a specific file.
 ```json
 {
   "sha": "abc123",
-  "path": "docs/environment/file1.md",
-  "name": "file1.md",
+  "path": "docs/environment/file1.mdx",
+  "name": "file1.mdx",
   "type": "file",
-  "content": "This is the content of file1.md"
+  "content": "This is the content of file1.mdx"
 }
 ```
 
@@ -83,7 +77,7 @@ Get the content of a specific file.
 **Endpoint:**
 
 ```
-POST /create?type=create&path=docs/environment/newFile.md
+POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/create?type=create&path=environment/newFile.mdx
 ```
 
 **Request Body:**
@@ -103,7 +97,7 @@ Create a new file in the "environment" directory.
 ```json
 {
   "sha": "new_sha_value",
-  "path": "docs/environment/newFile.md",
+  "path": "docs/environment/newFile.mdx",
   "name": "newFile.md",
   "type": "file"
 }
@@ -114,14 +108,14 @@ Create a new file in the "environment" directory.
 **Endpoint:**
 
 ```
-POST /update?type=update&path=docs/environment/file1.md&sha=abc123
+POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?type=update&path=environment/file1.md&sha=abc123
 ```
 
 **Request Body:**
 
 ```json
 {
-  "content": "Updated content of file1.md."
+  "content": "Updated content of file1.mdx"
 }
 ```
 
@@ -134,7 +128,7 @@ Update the content of an existing file.
 ```json
 {
   "sha": "new_sha_value",
-  "path": "docs/environment/file1.md",
+  "path": "docs/environment/file1.mdx",
   "name": "file1.md",
   "type": "file"
 }
@@ -145,7 +139,7 @@ Update the content of an existing file.
 **Endpoint:**
 
 ```
-POST /delete?type=delete&path=docs/environment/file1.md&sha=abc123
+POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?type=delete&path=environment/file1.md&sha=abc123
 ```
 
 **Description:**
