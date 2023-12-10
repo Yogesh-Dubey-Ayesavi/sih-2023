@@ -108,7 +108,7 @@ Create a new file in the "environment" directory.
 **Endpoint:**
 
 ```
-POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/update?type=update&path=docs/environment/file1.md&sha=abc123
+POST  https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?type=update&path=environment/file1.md&sha=abc123
 ```
 
 **Request Body:**
@@ -139,7 +139,7 @@ Update the content of an existing file.
 **Endpoint:**
 
 ```
-POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api/delete?type=delete&path=environment/file1.md&sha=abc123
+POST https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?type=delete&path=environment/file1.md&sha=abc123
 ```
 
 **Description:**
