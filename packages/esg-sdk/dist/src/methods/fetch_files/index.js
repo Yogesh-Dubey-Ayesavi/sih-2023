@@ -12,11 +12,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const file_model_1 = require("../../models/file_model");
 const axios_1 = __importDefault(require("axios"));
+const file_model_1 = require("../../models/file_model");
 /**
  * Fetches a list of FileModel instances from the specified API endpoint.
- * @param {string} dir - The directory parameter for the API endpoint.
+ * @param {string} dir - The directory parameter for the API endpoint, Must be one of **environment**, **social**, **governance**.
  * @returns {Promise<FileModel[]>} - A Promise that resolves to an array of FileModel instances.
  */
 function fetchFiles(dir) {

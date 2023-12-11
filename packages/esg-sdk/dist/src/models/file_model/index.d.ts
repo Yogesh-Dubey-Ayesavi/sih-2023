@@ -36,12 +36,12 @@ export declare class FileModel implements IFileModel {
      */
     sha: string;
     /**
-     * The path of the file, including the file name.
+     * The path of the file, including the file name without extension.
      * @type {string}
      */
     path: string;
     /**
-     * The name of the file.
+     * The name of the file without extension.
      * @type {string}
      */
     name: string;

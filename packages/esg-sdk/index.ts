@@ -7,3 +7,5 @@ export { Administrator, IAdministrator } from "src/models/administrator";
 export { FileComment, IFileComment } from "src/models/file_comment";
 export { FileContent, IFileContent } from "src/models/file_content";
 export { FileModel, IFileModel } from "src/models/file_model";
+export { default as EsgSDK } from "./src/sdk";
+
