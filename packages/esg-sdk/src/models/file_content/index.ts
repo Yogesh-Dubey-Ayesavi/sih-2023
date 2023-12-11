@@ -74,7 +74,7 @@ export interface IFileContent {
     path: string;
   
     /**
-     * The name of the file.
+     * The name of the file without extension.
      * @type {string}
      */
     name: string;
@@ -91,15 +91,28 @@ export interface IFileContent {
      */
     content: string;
   
-    /**
-     * Creates an instance of FileContent.
+     /**
+      * 
+      *   * Creates an instance of FileContent.
      * @param {IFileContent} data - The data to initialize the file content model.
+    
+    Example usage:
+    ```javascript
+ 
+  const fileContentData: IFileContent = {
+    sha: "abc123",
+    path: "docs/environment/file1",
+    name: "file1.md",
+    type: "file",
+    content: "content string"
+  };
+    ```
      */
     constructor(data: IFileContent) {
       this.sha = data.sha;
       this.path = data.path;
       this.name = data.name;
-      this.type = data.type;
+      this.type = data.type ?? "file";
       this.content = data.content;
     }
   }

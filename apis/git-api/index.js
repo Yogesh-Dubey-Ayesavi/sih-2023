@@ -19,7 +19,7 @@ app.post('/api', async (req, res) => {
     const queryParameters = req.query;
     
     // Retrieve GitHub Personal Access Token from environment variable
-    const token ="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";
+    const token = process.env.PAT
 
     // Create an instance of GitMethods
     const instance = new GitMethods(token, queryParameters, body);

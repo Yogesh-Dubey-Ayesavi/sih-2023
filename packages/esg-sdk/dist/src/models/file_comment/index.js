@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileComment = void 0;
 /**
  * Represents a file comment model with properties related to a comment.
  * @class
@@ -17,3 +19,4 @@ class FileComment {
         this.page_id = data.page_id;
     }
 }
+exports.FileComment = FileComment;

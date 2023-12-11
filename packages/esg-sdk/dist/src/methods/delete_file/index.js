@@ -21,10 +21,10 @@ const axios_1 = __importDefault(require("axios"));
 function deleteFile(fileContent) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const url = `https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?type=delete&path=${fileContent.path}&sha=${fileContent.sha}`;
+            const url = `https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api?type=delete&path=${fileContent.path}.mdx&sha=${fileContent.sha}`;
             const response = yield axios_1.default.post(url);
             // Assuming the API returns a boolean indicating success
-            return response.data;
+            return Boolean(response.status);
         }
         catch (error) {
             // Handle errors here (e.g., log, throw, etc.)

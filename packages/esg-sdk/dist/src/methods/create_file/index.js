@@ -12,7 +12,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const file_content_1 = require("../../models/file_content");
 const axios_1 = __importDefault(require("axios"));
 const BASE_URL = 'https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api';
 /**
@@ -23,15 +22,12 @@ const BASE_URL = 'https://asia-south1-esgedu-740d2.cloudfunctions.net/git-api';
 function createFile(file) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const url = `${BASE_URL}/create?type=create&path=${file.path}/${file.name}.mdx`;
+            const url = `${BASE_URL}/create?type=create&path=${file.path}.mdx`;
             const requestBody = {
                 content: file.content
             };
             const response = yield axios_1.default.post(url, requestBody);
-            // Assuming the API returns a FileContent-like object
-            const createdFile = new file_content_1.FileContent(response.data);
-            // Assuming the creation is considered successful if the SHA property is present
-            return Boolean(createdFile.sha);
+            return Boolean(response.status == 200);
         }
         catch (error) {
             console.error('Error creating file:', error);

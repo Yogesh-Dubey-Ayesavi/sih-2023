@@ -43,7 +43,9 @@
         const response = await this.getContent(this.owner, this.repoName, `client/docs/${key}`);
         return  response.map((e)=>{
             const  { sha, path, name, type } = e;
-            return { sha, path, name, type };
+            let filePath = this.extractLastDir(path)
+            let fileName = this.extractFileNameWithoutExtension(name)
+            return { sha :sha, path:filePath, name:fileName, type:type };
         });
         
       } else {
@@ -54,8 +56,9 @@
     // Helper method to handle "get_content" request
     async handleGetContentRequest() {
       const { sha, path, name, type, content } = await this.getContent(this.owner, this.repoName, `client/docs/${this.params.get_content}`  );
-     
-      return { sha : sha, path:path, name:name, type:type, content: Buffer.from(content, 'base64').toString('utf-8')};
+      let filePath = this.extractLastDir(path)
+            let fileName = this.extractFileNameWithoutExtension(name)
+      return { sha : sha, path:filePath, name:fileName, type:type, content: Buffer.from(content, 'base64').toString('utf-8')};
     }
 
     // Helper method to handle "create" request
@@ -159,6 +162,29 @@
       }
     }
 
+     extractFileNameWithoutExtension(name) {
+      return name.substring(0,name.lastIndexOf("."))
+    }
+    
+   
+    
+     extractLastDir(path) {
+      // Split the path into an array using '/'
+      const pathArray = path.split('/');
+    
+      // Check if the path has at least two elements (directory and file)
+      if (pathArray.length >= 2) {
+        // Get the last two elements
+        const [lastDir, lastFile] = pathArray.slice(-2);
+    
+        // Return the last directory and file (without extension) joined with '/'
+        return `${lastDir}/${this.extractFileNameWithoutExtension(lastFile)}`;
+      } else {
+        // If there are less than two elements, return the original path
+        return path;
+      }
+    }
+    
     validatePath(){
               // Define valid keywords
         const validKeywords = ['environment', 'social', 'governance'];
