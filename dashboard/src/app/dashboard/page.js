@@ -10,7 +10,7 @@ import {
     return (
       <Tabs defaultValue="economical" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger className="border-stone-500 border-2 mx-2 rounded-xl data-[state=active]:bg-slate-600" value="economical">Economical</TabsTrigger>
+          <TabsTrigger className="border-stone-500 border-2 mx-2 rounded-xl data-[state=active]:bg-slate-600" value="economical">Environmental</TabsTrigger>
           <TabsTrigger className="border-stone-500 border-2 mx-2 rounded-xl data-[state=active]:bg-slate-600" value="governance">Governance</TabsTrigger>
           <TabsTrigger className="border-stone-500 border-2 mx-2 rounded-xl data-[state=active]:bg-slate-600" value="social">Social</TabsTrigger>
         </TabsList>

@@ -1,16 +1,26 @@
 "use client";
 
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useState } from "react";
+import { EsgSDK } from "esg-sdk";
+import InitiativeCard from "../InitiativeCard";
 
-const SocialInitiative = ({  }) => {
+const ESG = EsgSDK.initialize();
+
+const SocialInitiative = ({}) => {
+  const [initiatives, setInitiatives] = useState([]);
+
   useLayoutEffect(() => {
-    // const getData = async () => {
-    //     const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/?list=social`);
-    //     console.log(data);
-    // }
-    // getData();
+    const getData = async () => {
+      const files = await ESG.fetchFiles('social');
+      console.log(files)
+      setInitiatives(files);
+    };
+    getData();
   }, []);
-  return (<div>social initiative</div>);
+  return (
+    initiatives.map(initiative => <InitiativeCard title={initiative.name} key={initiative.sha} dir='social'/>)
+  )
+  ;
 };
 
 export default SocialInitiative;
