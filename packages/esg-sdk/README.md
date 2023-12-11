@@ -2,7 +2,8 @@
 
 ```typescript
 // Example usage of the EsgSDK class with FileContent and FileModel
-import EsgSDK from "../packages/esg-sdk";
+import {EsgSDK} from "esg-sdk";
+
 // Initialize the EsgSDK singleton instance
 const esgSDK = EsgSDK.initialize();
 
