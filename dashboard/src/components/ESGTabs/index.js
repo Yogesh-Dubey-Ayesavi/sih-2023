@@ -1,9 +1,9 @@
-import EconomicalInitiative from "./EconomicalInitiative";
+import EnvironmentInitiative from "./EnvironmentInitiative";
 import SocialInitiative from "./SocialInitiative";
 import GovernanceInitiative from "./GovernanceInitiative";
 
 export {
-    EconomicalInitiative,
+    EnvironmentInitiative,
     SocialInitiative,
     GovernanceInitiative
 }

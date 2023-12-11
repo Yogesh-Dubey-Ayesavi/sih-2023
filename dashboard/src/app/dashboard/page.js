@@ -4,7 +4,7 @@ import {
     TabsList,
     TabsTrigger,
   } from "@/components/ui/tabs";
-  import { EconomicalInitiative, SocialInitiative, GovernanceInitiative } from "@/components/ESGTabs/index";
+  import { EnvironmentInitiative, SocialInitiative, GovernanceInitiative } from "@/components/ESGTabs/index";
   
   export default function TabsDemo() {
     return (
@@ -15,7 +15,7 @@ import {
           <TabsTrigger value="social">Social</TabsTrigger>
         </TabsList>
         <TabsContent value="economical">
-          <EconomicalInitiative initiative="economical" />
+          <EnvironmentInitiative initiative="economical" />
         </TabsContent>
         <TabsContent value="governance">
           <GovernanceInitiative initiative="governance" />
