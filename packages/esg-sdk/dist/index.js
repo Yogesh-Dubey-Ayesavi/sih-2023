@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FileModel = exports.FileContent = exports.FileComment = exports.Administrator = exports.updateFile = exports.getFileContent = exports.fetchFiles = exports.deleteFile = exports.createFile = void 0;
+exports.EsgSDK = exports.FileModel = exports.FileContent = exports.FileComment = exports.Administrator = exports.updateFile = exports.getFileContent = exports.fetchFiles = exports.deleteFile = exports.createFile = void 0;
 var create_file_1 = require("src/methods/create_file");
 Object.defineProperty(exports, "createFile", { enumerable: true, get: function () { return __importDefault(create_file_1).default; } });
 var delete_file_1 = require("src/methods/delete_file");
@@ -22,3 +22,5 @@ var file_content_1 = require("src/models/file_content");
 Object.defineProperty(exports, "FileContent", { enumerable: true, get: function () { return file_content_1.FileContent; } });
 var file_model_1 = require("src/models/file_model");
 Object.defineProperty(exports, "FileModel", { enumerable: true, get: function () { return file_model_1.FileModel; } });
+var sdk_1 = require("./src/sdk");
+Object.defineProperty(exports, "EsgSDK", { enumerable: true, get: function () { return __importDefault(sdk_1).default; } });

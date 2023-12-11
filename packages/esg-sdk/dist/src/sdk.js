@@ -133,3 +133,4 @@ class EsgSDK {
         });
     }
 }
+exports.default = EsgSDK;
