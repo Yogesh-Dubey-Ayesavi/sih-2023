@@ -12,7 +12,7 @@ import { FileModel } from "./models/file_model";
  * It follows the Singleton pattern to ensure a single instance is used throughout the application.
  * @class
  */
-class EsgSDK {
+export default class EsgSDK {
   private static instance: EsgSDK;
 
   /**
