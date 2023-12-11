@@ -10,18 +10,18 @@ import {
     return (
       <Tabs defaultValue="economical" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="economical">Economical</TabsTrigger>
-          <TabsTrigger value="governance">Governance</TabsTrigger>
-          <TabsTrigger value="social">Social</TabsTrigger>
+          <TabsTrigger className="border-stone-500 border-2 mx-2 rounded-xl data-[state=active]:bg-slate-600" value="economical">Economical</TabsTrigger>
+          <TabsTrigger className="border-stone-500 border-2 mx-2 rounded-xl data-[state=active]:bg-slate-600" value="governance">Governance</TabsTrigger>
+          <TabsTrigger className="border-stone-500 border-2 mx-2 rounded-xl data-[state=active]:bg-slate-600" value="social">Social</TabsTrigger>
         </TabsList>
         <TabsContent value="economical">
-          <EnvironmentInitiative initiative="economical" />
+          <EnvironmentInitiative />
         </TabsContent>
         <TabsContent value="governance">
-          <GovernanceInitiative initiative="governance" />
+          <GovernanceInitiative />
         </TabsContent>
         <TabsContent value="social">
-          <SocialInitiative initiative="social" />
+          <SocialInitiative />
         </TabsContent>
       </Tabs>
     );

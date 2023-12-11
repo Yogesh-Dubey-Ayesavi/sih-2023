@@ -1,7 +1,7 @@
 import React from "react";
 
-const GovernanceInitiative = ({ initiative }) => {
-  return <div>{initiative}</div>;
+const GovernanceInitiative = ({  }) => {
+  return <div>gov initiative</div>;
 };
 
 export default GovernanceInitiative;

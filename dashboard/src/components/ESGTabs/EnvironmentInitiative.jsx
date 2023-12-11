@@ -1,7 +1,7 @@
 import React from "react";
 
-const EnvironmentInitiative = ({ initiative }) => {
-  return <div>{initiative}</div>;
+const EnvironmentInitiative = ({  }) => {
+  return <div>env initiative</div>;
 };
 
 export default EnvironmentInitiative;
