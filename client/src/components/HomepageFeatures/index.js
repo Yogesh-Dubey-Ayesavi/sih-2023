@@ -1,45 +1,42 @@
-import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Environmental Focus',
+    imageSrc: require('@site/static/img/environmental_icon.png').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Explore a variety of articles on environmental sustainability and conservation. Learn about eco-friendly practices and their impact on our planet.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Social Responsibility',
+    imageSrc: require('@site/static/img/social_responsibility_icon.png').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Delve into articles addressing social responsibility and ethical considerations. Understand the importance of community engagement and inclusivity.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Governance Insights',
+    imageSrc: require('@site/static/img/governance_icon.png').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Gain insights into governance principles and practices. Explore articles on corporate governance, ethics, and effective leadership.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ imageSrc, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img src={imageSrc} alt={title} className={styles.featureImage} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -52,7 +49,7 @@ function Feature({Svg, title, description}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div >
+      <div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
@@ -62,3 +59,4 @@ export default function HomepageFeatures() {
     </section>
   );
 }
+

@@ -9,14 +9,15 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'EsgEdu',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  tagline: 'Nurturing Change: Gateway to ESG Awareness',
+  favicon: 'img/logo.png.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://esg.edu.ayesavi.in/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -48,15 +49,9 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Yogesh-Dubey-Ayesavi/sih-docusaurus-template/tree/mainpackages/create-docusaurus/templates/shared/',
+            'https://github.com/Yogesh-Dubey-Ayesavi/sih-2023/tree/main/client',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Yogesh-Dubey-Ayesavi/sih-docusaurus-template/tree/mainpackages/create-docusaurus/templates/shared/',
-        },
+        blog:false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -73,9 +68,10 @@ const config = {
         title: 'ESG-Edu',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png.png',
         },
         items: [
+  
           {
             type: 'docSidebar',
             sidebarId: 'environmentSideBar',
@@ -94,6 +90,11 @@ const config = {
             position: 'left',
             label: 'Governance',
           },
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          },
+
         
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -109,35 +110,27 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Environmental',
+                to: '/docs/environmental',
+              }, {
+                label: 'Social',
+                to: '/docs/social',
+              }, {
+                label: 'Governance',
+                to: '/docs/governance',
               },
             ],
           },
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+             
             ],
           },
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+            
               {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',
