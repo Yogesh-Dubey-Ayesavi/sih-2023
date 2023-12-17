@@ -97,7 +97,7 @@ const config = {
 
         
           {
-            href: 'https://github.com/yogesh-dubey-ayesavi',
+            href: 'https://github.com/yogesh-dubey-ayesavi/sih-2023',
             label: 'GitHub',
             position: 'right',
           },
@@ -133,7 +133,7 @@ const config = {
             
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/yogesh-dubey-ayesavi/sih-2023',
               },
             ],
           },
