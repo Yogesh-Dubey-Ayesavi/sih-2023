@@ -1,1 +1,27 @@
-# Click to start editing 1        fdsafdsfdd
+Certainly! Below is a TypeScript documentation (JSDoc) for your `getInitiativeCountByStatus` method:
+
+```typescript
+/**
+ * Asynchronously retrieves the count of initiatives by a specified status from a Supabase table.
+ *
+ * @param {string} status - The status for which to retrieve the initiative count.
+ * @returns {Promise<number>} A promise that resolves to the count of initiatives with the specified status.
+ *
+ * @throws {Error} If there is an issue with the Supabase query or if an error occurs during execution.
+ *
+ * @example
+ * // Usage example:
+ * try {
+ *   const status = 'active';
+ *   const initiativeCount = await getInitiativeCountByStatus(status);
+ *   console.log(`Number of initiatives with status '${status}': ${initiativeCount}`);
+ * } catch (error) {
+ *   console.error(`Error retrieving initiative count: ${error.message}`);
+ * }
+ */
+async function getInitiativeCountByStatus(status: string): Promise<number> {
+  // Implementation details...
+}
+```
+
+This documentation provides information about the purpose of the method, the parameters it accepts, the expected return type, potential errors, and includes an example of how to use the method. Make sure to replace the `// Implementation details...` comment with the actual implementation of your method.
